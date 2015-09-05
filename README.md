@@ -1,6 +1,5 @@
 # UIImageUtilities
 
-[![CI Status](http://img.shields.io/travis/Daniel Blakemore/UIImageUtilities.svg?style=flat)](https://travis-ci.org/Daniel Blakemore/UIImageUtilities)
 [![Version](https://img.shields.io/cocoapods/v/UIImageUtilities.svg?style=flat)](http://cocoapods.org/pods/UIImageUtilities)
 [![License](https://img.shields.io/cocoapods/l/UIImageUtilities.svg?style=flat)](http://cocoapods.org/pods/UIImageUtilities)
 [![Platform](https://img.shields.io/cocoapods/p/UIImageUtilities.svg?style=flat)](http://cocoapods.org/pods/UIImageUtilities)
