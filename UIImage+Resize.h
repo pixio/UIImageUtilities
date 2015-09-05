@@ -1,6 +1,5 @@
 //
 //  UIImage+Resize.h
-//  Favred
 //
 //  Created by Daniel Blakemore on 3/31/14.
 //
@@ -28,12 +27,20 @@
 #import <UIKit/UIKit.h>
 
 /**
- *  A UIImage category which resizes images to fit within a specified height.
+ *  A UIImage category which resizes images to fit within specified dimensions.
  */
 @interface UIImage (Resize)
 
 + (UIImage*)resizeImage:(UIImage*)image height:(CGFloat)height;
 
-- (UIImage*)resizeWithHeight:(CGFloat)height;
++ (UIImage*)resizeImage:(UIImage*)image width:(CGFloat)width;
+
++ (UIImage*)resizeImage:(UIImage*)image width:(CGFloat)desiredWidth height:(CGFloat)desiredHeight
+
+- (UIImage*)resizeWithinHeight:(CGFloat)height;
+
+- (UIImage*)resizeWithinWidth:(CGFloat)width;
+
+- (UIImage*)resizeWithinWidth:(CGFloat)width height:(CGFloat)height;
 
 @end

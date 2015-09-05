@@ -1,6 +1,5 @@
 //
 //  UIImage+Resize.m
-//  Favred
 //
 //  Created by Daniel Blakemore on 3/31/14.
 //
@@ -31,17 +30,20 @@
 
 + (UIImage*)resizeImage:(UIImage*)image height:(CGFloat)height
 {
-    // HACK: Check the size of the photo until it's under 128K so we can store it on the server.
-    // Probably don't need this hack, but it sounds like a good idea right now, especially since
-    // sending PNGs up to Parse keeps giving me a "photo faield to save: obj should be less than 128 kB" error.
-    
-    // TODO: Remove arbitrary size for image. Maybe something that matches the preview window. Or the size of the phone screen?
-    float desiredWidth = UINT16_MAX;
-    float desiredHeight = height;
-    float actualHeight = image.size.height;
-    float actualWidth = image.size.width;
-    float imgRatio = actualWidth / actualHeight;
-    float maxRatio = desiredWidth / desiredHeight;
+    [self resizeImage:image width:CGFLOAT_MAX height:height];
+}
+
++ (UIImage*)resizeImage:(UIImage*)image width:(CGFloat)width
+{
+    [self resizeImage:image width:width height:CGFLOAT_MAX];
+}
+
++ (UIImage*)resizeImage:(UIImage*)image width:(CGFloat)desiredWidth height:(CGFloat)desiredHeight
+{
+    CGFloat actualHeight = image.size.height;
+    CGFloat actualWidth = image.size.width;
+    CGFloat imgRatio = actualWidth / actualHeight;
+    CGFloat maxRatio = desiredWidth / desiredHeight;
     
     if(imgRatio != maxRatio)
     {
@@ -67,9 +69,19 @@
     return image;
 }
 
-- (UIImage*)resizeWithHeight:(CGFloat)height
+- (UIImage*)resizeWithinHeight:(CGFloat)height
 {
     return [UIImage resizeImage:self height:height];
+}
+
+- (UIImage*)resizeWithinWidth:(CGFloat)width
+{
+    return [UIImage resizeImage:self width:width];
+}
+
+- (UIImage*)resizeWithinWidth:(CGFloat)width height:(CGFloat)height
+{
+    return [UIImage resizeImage:image width:width height:height];
 }
 
 @end
