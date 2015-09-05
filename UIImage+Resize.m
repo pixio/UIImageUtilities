@@ -30,12 +30,12 @@
 
 + (UIImage*)resizeImage:(UIImage*)image height:(CGFloat)height
 {
-    [self resizeImage:image width:CGFLOAT_MAX height:height];
+    return [self resizeImage:image width:CGFLOAT_MAX height:height];
 }
 
 + (UIImage*)resizeImage:(UIImage*)image width:(CGFloat)width
 {
-    [self resizeImage:image width:width height:CGFLOAT_MAX];
+    return [self resizeImage:image width:width height:CGFLOAT_MAX];
 }
 
 + (UIImage*)resizeImage:(UIImage*)image width:(CGFloat)desiredWidth height:(CGFloat)desiredHeight
@@ -81,7 +81,7 @@
 
 - (UIImage*)resizeWithinWidth:(CGFloat)width height:(CGFloat)height
 {
-    return [UIImage resizeImage:image width:width height:height];
+    return [UIImage resizeImage:self width:width height:height];
 }
 
 @end

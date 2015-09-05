@@ -35,7 +35,7 @@
 
 + (UIImage*)resizeImage:(UIImage*)image width:(CGFloat)width;
 
-+ (UIImage*)resizeImage:(UIImage*)image width:(CGFloat)desiredWidth height:(CGFloat)desiredHeight
++ (UIImage*)resizeImage:(UIImage*)image width:(CGFloat)desiredWidth height:(CGFloat)desiredHeight;
 
 - (UIImage*)resizeWithinHeight:(CGFloat)height;
 
