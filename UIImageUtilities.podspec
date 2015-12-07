@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "UIImageUtilities"
-  s.version          = "0.1.4"
+  s.version          = "0.1.5"
   s.summary          = "A collection of useful image utility classes."
   s.description      = <<-DESC
 A collection of useful image categories including:
