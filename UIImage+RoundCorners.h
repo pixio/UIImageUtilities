@@ -29,8 +29,8 @@
 
 @interface UIImage (RoundCorners)
 
-+ (UIImage*)imageNamed:(NSString*)name cornerRadius:(CGFloat)cornerRadius;
++ (nullable UIImage*)imageNamed:(nullable NSString*)name cornerRadius:(CGFloat)cornerRadius;
 
-- (UIImage*)roundedImageWithCornerRadius:(CGFloat)cornerRadius;
+- (nullable UIImage*)roundedImageWithCornerRadius:(CGFloat)cornerRadius;
 
 @end

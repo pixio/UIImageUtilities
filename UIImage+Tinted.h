@@ -32,10 +32,10 @@
  */
 @interface UIImage (Tinted)
 
-+ (UIImage *)tintedFlatImageNamed:(NSString *)name colored:(UIColor*)color;
-+ (UIImage *)tintedLuminousImageNamed:(NSString *)name colored:(UIColor*)color;
++ (nullable UIImage *)tintedFlatImageNamed:(nullable NSString *)name colored:(nonnull UIColor*)color;
++ (nullable UIImage *)tintedLuminousImageNamed:(nullable NSString *)name colored:(nonnull UIColor*)color;
 
-- (UIImage *)tintedFlatImageUsingColor:(UIColor *)tintColor;
-- (UIImage *)tintedLuminousImageUsingColor:(UIColor *)tintColor;
+- (nonnull UIImage *)tintedFlatImageUsingColor:(nonnull UIColor *)tintColor;
+- (nonnull UIImage *)tintedLuminousImageUsingColor:(nonnull UIColor *)tintColor;
 
 @end
