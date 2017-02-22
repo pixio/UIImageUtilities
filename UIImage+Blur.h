@@ -27,6 +27,6 @@
 
 @interface UIImage (Blur)
 
--(UIImage *)boxblurImageWithBlur:(CGFloat)blur;
+-(nonnull UIImage *)boxblurImageWithBlur:(CGFloat)blur;
 
 @end

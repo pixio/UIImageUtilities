@@ -31,16 +31,16 @@
  */
 @interface UIImage (Resize)
 
-+ (UIImage*)resizeImage:(UIImage*)image height:(CGFloat)height;
++ (nonnull UIImage*)resizeImage:(nonnull UIImage*)image height:(CGFloat)height;
 
-+ (UIImage*)resizeImage:(UIImage*)image width:(CGFloat)width;
++ (nonnull UIImage*)resizeImage:(nonnull UIImage*)image width:(CGFloat)width;
 
-+ (UIImage*)resizeImage:(UIImage*)image width:(CGFloat)desiredWidth height:(CGFloat)desiredHeight;
++ (nonnull UIImage*)resizeImage:(nonnull UIImage*)image width:(CGFloat)desiredWidth height:(CGFloat)desiredHeight;
 
-- (UIImage*)resizeWithinHeight:(CGFloat)height;
+- (nonnull UIImage*)resizeWithinHeight:(CGFloat)height;
 
-- (UIImage*)resizeWithinWidth:(CGFloat)width;
+- (nonnull UIImage*)resizeWithinWidth:(CGFloat)width;
 
-- (UIImage*)resizeWithinWidth:(CGFloat)width height:(CGFloat)height;
+- (nonnull UIImage*)resizeWithinWidth:(CGFloat)width height:(CGFloat)height;
 
 @end
